@@ -10,9 +10,10 @@ import {
 type Props = {
   children: React.ReactNode;
   style?: ViewStyle;
+  contentSize?: { width: number; height: number };
 };
 
-export default function ZoomableContainer({ children, style }: Props) {
+export default function ZoomableContainer({ children, style, contentSize }: Props) {
   const baseScale = useRef(new Animated.Value(1)).current;
   const pinchScale = useRef(new Animated.Value(1)).current;
   const scale = Animated.multiply(baseScale, pinchScale);
@@ -75,7 +76,15 @@ export default function ZoomableContainer({ children, style }: Props) {
                 flex: 1,
                 justifyContent: "center",
                 alignItems: "center",
-                transform: [{ translateX }, { translateY }, { scale }],
+                transform: [
+                  { translateX },
+                  { translateY },
+                  { translateX: -(contentSize?.width ?? 0) / 2 },
+                  { translateY: -(contentSize?.height ?? 0) / 2 },
+                  { scale },
+                  { translateX: (contentSize?.width ?? 0) / 2 },
+                  { translateY: (contentSize?.height ?? 0) / 2 },
+                ],
               }}
             >
               <Animated.View style={style}>{children}</Animated.View>
