@@ -1,9 +1,9 @@
-import { useMemo, useState } from "react";
-import { Text, View } from "react-native";
+import Entypo from "@expo/vector-icons/Entypo";
 import FontAwesome6 from "@expo/vector-icons/FontAwesome6";
 import Ionicons from "@expo/vector-icons/Ionicons";
 import MaterialCommunityIcons from "@expo/vector-icons/MaterialCommunityIcons";
-import Entypo from "@expo/vector-icons/Entypo";
+import { useMemo, useState } from "react";
+import { Text, View } from "react-native";
 import Svg, { Line } from "react-native-svg";
 import ZoomableContainer from "../../components/ZoomableContainer";
 

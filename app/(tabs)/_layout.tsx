@@ -1,4 +1,5 @@
 import AntDesign from "@expo/vector-icons/AntDesign";
+import Foundation from "@expo/vector-icons/Foundation";
 import { Tabs } from "expo-router";
 
 export default function TabsLayout() {
@@ -17,10 +18,10 @@ export default function TabsLayout() {
       <Tabs.Screen
         name="index"
         options={{
-          title: "Home",
+          title: "Notes",
           headerShadowVisible: false,
           tabBarIcon: ({ color, size }) => (
-            <AntDesign name="home" size={size ?? 24} color={color ?? "black"} />
+            <Foundation name="clipboard-notes" size={size ?? 24} color={color ?? "black"} />
           ),
         }}
       />
