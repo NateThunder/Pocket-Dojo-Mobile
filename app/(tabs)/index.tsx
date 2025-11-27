@@ -9,7 +9,8 @@ export default function Index() {
         alignItems: "center",
       }}
     >
-      <Text>Edit app/index.tsx to edit this screen.</Text>
+      <Text style={{ fontSize: 18, fontWeight: "600" }}>Notes</Text>
+      <Text style={{ marginTop: 8, color: "#444" }}>Capture your training notes here.</Text>
     </View>
   );
 }
