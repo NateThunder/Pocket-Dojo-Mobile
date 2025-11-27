@@ -4,7 +4,7 @@ import { Tabs } from "expo-router";
 
 export default function TabsLayout() {
   return (
-    <Tabs screenOptions={{ headerTitleAlign: "center" }}>
+    <Tabs initialRouteName="flow-trainer" screenOptions={{ headerTitleAlign: "center" }}>
       <Tabs.Screen
         name="flow-trainer"
         options={{
@@ -16,7 +16,7 @@ export default function TabsLayout() {
         }}
       />
       <Tabs.Screen
-        name="index"
+        name="notes"
         options={{
           title: "Notes",
           headerShadowVisible: false,
