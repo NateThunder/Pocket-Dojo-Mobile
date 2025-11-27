@@ -1,33 +1,27 @@
-import { Tabs } from 'expo-router';
-import React from 'react';
+import AntDesign from "@expo/vector-icons/AntDesign";
+import { Tabs } from "expo-router";
 
-import { HapticTab } from '@/components/haptic-tab';
-import { IconSymbol } from '@/components/ui/icon-symbol';
-import { Colors } from '@/constants/theme';
-import { useColorScheme } from '@/hooks/use-color-scheme';
-
-export default function TabLayout() {
-  const colorScheme = useColorScheme();
-
+export default function TabsLayout() {
   return (
-    <Tabs
-      screenOptions={{
-        tabBarActiveTintColor: Colors[colorScheme ?? 'light'].tint,
-        headerShown: false,
-        tabBarButton: HapticTab,
-      }}>
+    <Tabs screenOptions={{ headerTitleAlign: "center" }}>
       <Tabs.Screen
-        name="index"
+        name="flow-trainer"
         options={{
-          title: 'Home',
-          tabBarIcon: ({ color }) => <IconSymbol size={28} name="house.fill" color={color} />,
+          title: "Flow Trainer",
+          headerShadowVisible: false,
+          tabBarIcon: ({ color, size }) => (
+            <AntDesign name="partition" size={size ?? 24} color={color ?? "black"} />
+          ),
         }}
       />
       <Tabs.Screen
-        name="explore"
+        name="index"
         options={{
-          title: 'Explore',
-          tabBarIcon: ({ color }) => <IconSymbol size={28} name="paperplane.fill" color={color} />,
+          title: "Home",
+          headerShadowVisible: false,
+          tabBarIcon: ({ color, size }) => (
+            <AntDesign name="home" size={size ?? 24} color={color ?? "black"} />
+          ),
         }}
       />
     </Tabs>
