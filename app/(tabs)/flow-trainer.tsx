@@ -21,8 +21,8 @@ const NODE_WIDTH = 120;
 const NODE_HEIGHT = 60;
 const H_SPACING = 160;
 const V_SPACING = 80;
-const START_X = 120;
-const START_Y = 120;
+const START_X = 40;
+const START_Y = 260;
 
 export default function FlowTrainer() {
   const [nodes, setNodes] = useState<FlowNode[]>([{ id: "node-1", parentId: null }]);

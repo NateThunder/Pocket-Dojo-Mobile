@@ -74,16 +74,12 @@ export default function ZoomableContainer({ children, style, contentSize }: Prop
             <Animated.View
               style={{
                 flex: 1,
-                justifyContent: "center",
-                alignItems: "center",
+                justifyContent: "flex-start",
+                alignItems: "flex-start",
                 transform: [
                   { translateX },
                   { translateY },
-                  { translateX: -(contentSize?.width ?? 0) / 2 },
-                  { translateY: -(contentSize?.height ?? 0) / 2 },
                   { scale },
-                  { translateX: (contentSize?.width ?? 0) / 2 },
-                  { translateY: (contentSize?.height ?? 0) / 2 },
                 ],
               }}
             >
